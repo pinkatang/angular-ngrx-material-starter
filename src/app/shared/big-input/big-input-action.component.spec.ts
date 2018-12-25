@@ -35,16 +35,17 @@ describe('BigInputActionComponent', () => {
     TestBed.configureTestingModule({
       declarations: [HostComponent],
       imports: [SharedModule]
-    }));
+    })
+  );
 
   it('should be created', () => {
-    const template = '<anms-big-input-action></anms-big-input-action>';
+    const template = '<citr-big-input-action></citr-big-input-action>';
     fixture = createHostComponent(template);
     expect(component).toBeTruthy();
   });
 
   it('should initially not be disabled and show no icon or label', () => {
-    const template = '<anms-big-input-action></anms-big-input-action>';
+    const template = '<citr-big-input-action></citr-big-input-action>';
     fixture = createHostComponent(template);
     expect(getButton().nativeElement.disabled).toBeFalsy();
     expect(getIcon()).toBeNull();
@@ -53,13 +54,13 @@ describe('BigInputActionComponent', () => {
 
   it('should disable button if disabled property is set', () => {
     const template =
-      '<anms-big-input-action [disabled]="true"></anms-big-input-action>';
+      '<citr-big-input-action [disabled]="true"></citr-big-input-action>';
     fixture = createHostComponent(template);
     expect(getButton().nativeElement.disabled).toBeTruthy();
   });
 
   it('should display icon if fontSet and fontIcon properties are set', () => {
-    const template = `<anms-big-input-action fontSet="fas" fontIcon="fa-trash"></anms-big-input-action>`;
+    const template = `<citr-big-input-action fontSet="fas" fontIcon="fa-trash"></citr-big-input-action>`;
     fixture = createHostComponent(template);
     expect(getIcon()).toBeTruthy();
     expect(getIcon().nativeElement.classList.contains('fa-trash')).toBeTruthy();
@@ -67,14 +68,14 @@ describe('BigInputActionComponent', () => {
   });
 
   it('should display label with provided text when label property is set', () => {
-    const template = `<anms-big-input-action label="delete"></anms-big-input-action>`;
+    const template = `<citr-big-input-action label="delete"></citr-big-input-action>`;
     fixture = createHostComponent(template);
     expect(getLabel()).toBeTruthy();
     expect(getLabel().nativeElement.textContent).toBe('delete');
   });
 
   it('should emit action event on button click', () => {
-    const template = `<anms-big-input-action (action)="actionHandler()"></anms-big-input-action>`;
+    const template = `<citr-big-input-action (action)="actionHandler()"></citr-big-input-action>`;
     fixture = createHostComponent(template);
     spyOn(component, 'actionHandler').and.callThrough();
     getButton().triggerEventHandler('click', {});

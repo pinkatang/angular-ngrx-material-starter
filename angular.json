@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-ngrx-material-starter": {
+    "citr-project": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "anms",
+      "prefix": "citr",
       "schematics": {
         "@schematics/angular:component": {
           "changeDetection": "OnPush"
@@ -93,18 +93,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-ngrx-material-starter:build"
+            "browserTarget": "citr-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-ngrx-material-starter:build:production"
+              "browserTarget": "citr-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-ngrx-material-starter:build"
+            "browserTarget": "citr-project:build"
           }
         },
         "test": {
@@ -158,7 +158,7 @@
         }
       }
     },
-    "angular-ngrx-material-starter-e2e": {
+    "citr-project-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -166,7 +166,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-ngrx-material-starter:serve"
+            "devServerTarget": "citr-project:serve"
           }
         },
         "lint": {
@@ -181,5 +181,5 @@
       }
     }
   },
-  "defaultProject": "angular-ngrx-material-starter"
+  "defaultProject": "citr-project"
 }

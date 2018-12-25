@@ -1,11 +1,11 @@
 const packageJson = require('../../package.json');
 
 export const environment = {
-  appName: 'Angular Ngrx Material Starter',
+  appName: 'Citr project',
   envName: 'PROD',
   production: true,
   test: false,
-  i18nPrefix: '/angular-ngrx-material-starter',
+  i18nPrefix: '/citr-project',
   versions: {
     app: packageJson.version,
     angular: packageJson.dependencies['@angular/core'],
